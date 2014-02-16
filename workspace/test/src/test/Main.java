@@ -20,19 +20,16 @@
 
 package test;
 
+import static gpl.GPL.*;
+
+
 /**
  * 
  * @author ninux
  */
 public class Main {
     static public void main(String[] args){
-    	String copyright = "PRG2 Copyright (C) 2014 Ervin Mazlagic";
-	String warranty = "This program comes with ABSOLUTELY NO WARRANTY.";
-	String license = "This is free software as defined by GPLv3. \n"
-		+ "You can modify and redistribute it under "
-		+ "certain conditions (see GPLv3).";
-	String hiGPL = (copyright + "\n" + warranty + "\n" + license);
-
-	System.out.println(hiGPL);
+    	System.out.println(getAllLicense());
+	printAllLicense();
     }
 } 
