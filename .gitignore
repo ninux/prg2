@@ -1,0 +1,7 @@
+# some LaTeX things we don't need
+*.aux
+*.glo
+*.log
+*.out
+*.toc
+*.xdy
