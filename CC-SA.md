@@ -82,8 +82,8 @@ hereby grants You a worldwide, royalty-free, non-sublicensable,
 non-exclusive, irrevocable license to exercise the Licensed Rights in the 
 Licensed Material to:
 
-	reproduce and Share the Licensed Material, in whole or in part; 
-	and produce, reproduce, and Share Adapted Material.
+* reproduce and Share the Licensed Material, in whole or in part; 
+* and produce, reproduce, and Share Adapted Material.
 
 Exceptions and Limitations. 
 
