@@ -5,3 +5,9 @@
 *.out
 *.toc
 *.xdy
+
+# Since this is part of a programming course, I can assume,
+# that everyone interested in this is able to build it on his
+# own. Therefore I'll ignore the PDF
+
+prg2.pdf
