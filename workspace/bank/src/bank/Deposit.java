@@ -18,17 +18,36 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package test;
-
+package bank;
 import static gpl.GPL.*;
 
-
 /**
- * 
+ *
  * @author ninux
  */
-public class Main {
-    static public void main(String[] args){
-	printAllLicense();
-    }
-} 
+public class Deposit extends Account {
+	
+	// maximum payout
+	private double maxOut = 0;
+	
+	public Deposit(double aSaldo, double aRate, double aMaxOut){
+		super(aSaldo, aRate);
+		maxOut = aMaxOut;
+	}
+
+	// the method getSaldo is implemented in class "Account"
+	
+	public void payOut(double aPayOut){
+		if(aPayOut > maxOut){
+			// no transaction 
+		}else{
+			super.payOut(aPayOut);
+		}
+		
+	}
+	
+	public void print(){
+		super.print();
+		System.out.println("Account Maximum Outtake: \t" + maxOut);
+	}
+}

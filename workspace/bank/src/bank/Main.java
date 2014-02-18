@@ -18,17 +18,27 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package test;
-
+package bank;
 import static gpl.GPL.*;
 
-
 /**
- * 
+ *
  * @author ninux
  */
-public class Main {
-    static public void main(String[] args){
-	printAllLicense();
-    }
-} 
+public class Main{
+	static public void main(String[] args){
+		
+		// show licsnse info
+		printAllLicense();
+		System.out.println();
+		
+		// create an desposit account
+		Deposit d1 = new Deposit(123.50, 1.25, 1000.00);
+		
+		// show desposit status
+		d1.print();
+		
+		
+		
+	}
+}

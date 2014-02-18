@@ -11,3 +11,7 @@
 # own. Therefore I'll ignore the PDF
 
 prg2.pdf
+/workspace/account/nbproject/private/
+/workspace/account/build/
+/workspace/bank/nbproject/private/
+/workspace/bank/build/

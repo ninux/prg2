@@ -18,17 +18,18 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package test;
-
+package account;
 import static gpl.GPL.*;
 
-
 /**
- * 
+ *
  * @author ninux
  */
 public class Main {
-    static public void main(String[] args){
-	printAllLicense();
-    }
-} 
+	public static final String NAME= "Account Example";
+	
+	public static void main(String[] args){
+		System.out.println(NAME + "\n");
+		printAllLicense();
+	}
+}

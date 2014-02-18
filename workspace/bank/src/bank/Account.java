@@ -18,17 +18,54 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package test;
-
-import static gpl.GPL.*;
-
+package bank;
 
 /**
- * 
+ *
  * @author ninux
  */
-public class Main {
-    static public void main(String[] args){
-	printAllLicense();
-    }
-} 
+public class Account {
+	// counter for created accounts
+	private static int count = 0;
+	
+	// account number, saldo and rate
+	private int no = 0;
+	private double saldo = 0;
+	private double rate = 0;
+	
+	// account constructor
+	public Account(){
+		count++;		// no account with number 0
+		no = count;
+		saldo = 0;
+		rate = 0;
+	}
+	
+	// parametrized account constructor
+	public Account(double aSaldo, double aRate){
+		count++;
+		no = count;
+		saldo = aSaldo;
+		rate = aRate;
+	}
+	
+	public void payIn(double aPayIn){
+		saldo = saldo + aPayIn;
+	}
+	
+	public void payOut(double aPayOut){
+		saldo = saldo - aPayOut;
+	}
+	
+	public void print(){
+		System.out.println("Account Number: \t\t" + no);
+		System.out.println("Account Saldo: \t\t\t" + saldo);
+		System.out.println("Account Rate: \t\t\t" + rate);
+	}
+	
+	public double getSaldo(){
+		return saldo;
+	}
+	
+	
+}
