@@ -33,3 +33,5 @@ build.xml
 *.so
 *.swp
 *.lock
+/workspace/stack/nbproject/private/
+/workspace/stack/build/
