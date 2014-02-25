@@ -35,3 +35,5 @@ build.xml
 *.lock
 /workspace/stack/nbproject/private/
 /workspace/stack/build/
+/workspace/Queue/nbproject/private/
+/workspace/Queue/build/
