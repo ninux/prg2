@@ -48,6 +48,6 @@ public class Deposit extends Account {
 	
 	public void print(){
 		super.print();
-		System.out.println("Account Maximum Outtake: \t" + maxOut);
+		System.out.println("\tAccount Maximum Outtake: \t" + maxOut);
 	}
 }

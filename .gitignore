@@ -15,3 +15,15 @@ prg2.pdf
 /workspace/account/build/
 /workspace/bank/nbproject/private/
 /workspace/bank/build/
+
+# some netbeans and java specific files
+nbproject/*
+manifest.mf
+build.xml
+*.class
+
+# general swap/backup files 
+*.so
+*.swp
+*.lock
+

@@ -19,58 +19,56 @@
  */
 
 package bank;
+import static gpl.GPL.*;
+import java.util.ArrayList;
+import java.util.ListIterator;
 
 /**
  *
  * @author ninux
  */
-public class Account {
-	// counter for created accounts
-	private static int count = 0;
+public class LinkedList {
 	
-	// account number, saldo and rate
-	private int no = 0;
-	private double saldo = 0;
-	private double rate = 0;
+	private ListNode head;
 	
-	// account constructor
-	public Account(){
-		count++;		// no account with number 0
-		no = count;
-		saldo = 0;
-		rate = 0;
+	public LinkedList(){
+		head = null;
 	}
 	
-	// parametrized account constructor
-	public Account(double aSaldo, double aRate){
-		count++;
-		no = count;
-		saldo = aSaldo;
-		rate = aRate;
-	}
-	
-	public void payIn(double aPayIn){
-		saldo = saldo + aPayIn;
-	}
-	
-	public void payOut(double aPayOut){
-		saldo = saldo - aPayOut;
+	public void insert(Account a){
+		if(!contains(a)){
+			head = new ListNode(a, head);
+		}
 	}
 	
 	public void print(){
-		for(int i=0; i<80; i++){
-			System.out.print("-");
+		ListNode actualNode = head;
+		while(actualNode != null){
+			actualNode.getAccount().print();
+			actualNode = actualNode.getNext();
 		}
-		System.out.println();
-		
-		System.out.println("Account Number " + no + "\n");
-		System.out.println("\tAccount Saldo: \t\t\t" + saldo);
-		System.out.println("\tAccount Rate: \t\t\t" + rate);
 	}
 	
-	public double getSaldo(){
-		return saldo;
+	public int getLength(){
+		int length = 0;
+		ListNode actualNode = head;
+		while(actualNode != null){
+			length++;
+			actualNode.getNext();
+		}
+		return length;
 	}
 	
-	
+	public boolean contains(Account aAccount){
+		ListNode actualNode = head;
+		while((actualNode != null) && !aAccount.equals(actualNode.getAccount())){
+			actualNode = actualNode.getNext();
+		}
+		if(actualNode == null){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
 }

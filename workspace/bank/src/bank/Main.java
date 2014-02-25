@@ -38,7 +38,29 @@ public class Main{
 		// show desposit status
 		d1.print();
 		
+		// create an bank
+		Bank b1 = new Bank("First Bank of HSLU");
+		b1.openAccount(100.25, 0.25);
+		b1.openDeposit(2541.80, 1.25, 1000);
+		System.out.println("\nAll Accounts from " + b1.getName() + "\n");
+		b1.printAccounts();
+			
+		// create a linked list
+		LinkedList myList = new LinkedList();
 		
+		// insert some accounts into the linked list
+		Account a1 = new Account(100, 1.0);
+		Account a2 = new Account(200, 2.0);
+		Account a3 = new Account(300, 3.0);
+		Account a4 = new Account(400, 4.0);
 		
+		myList.insert(a1);
+		myList.insert(a2);
+		myList.insert(a3);
+		myList.insert(a4);
+
+		// show the content of the linked list
+		myList.print();
+			
 	}
 }

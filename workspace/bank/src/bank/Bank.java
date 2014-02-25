@@ -40,6 +40,10 @@ public class Bank {
 		name = aName;
 	}
 	
+	public String getName(){
+		return name;
+	}
+	
 	public void openAccount(double aSaldo, double aRate){
 		alK.add(new Account(aSaldo, aRate));
 	}

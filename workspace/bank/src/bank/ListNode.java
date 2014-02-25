@@ -19,58 +19,38 @@
  */
 
 package bank;
+import static gpl.GPL.*;
+import java.util.ArrayList;
+import java.util.ListIterator;
 
 /**
  *
  * @author ninux
  */
-public class Account {
-	// counter for created accounts
-	private static int count = 0;
+public class ListNode {
 	
-	// account number, saldo and rate
-	private int no = 0;
-	private double saldo = 0;
-	private double rate = 0;
+	private Account account;
+	private ListNode next;
 	
-	// account constructor
-	public Account(){
-		count++;		// no account with number 0
-		no = count;
-		saldo = 0;
-		rate = 0;
+	public ListNode(Account a, ListNode n){
+		account = a;
+		next = n;
 	}
 	
-	// parametrized account constructor
-	public Account(double aSaldo, double aRate){
-		count++;
-		no = count;
-		saldo = aSaldo;
-		rate = aRate;
+	public void setAccount(Account aNewAccount){
+		account = aNewAccount;
 	}
 	
-	public void payIn(double aPayIn){
-		saldo = saldo + aPayIn;
+	public void setNext(ListNode n){
+		next = n;
 	}
 	
-	public void payOut(double aPayOut){
-		saldo = saldo - aPayOut;
+	public Account getAccount(){
+		return account;
 	}
 	
-	public void print(){
-		for(int i=0; i<80; i++){
-			System.out.print("-");
-		}
-		System.out.println();
-		
-		System.out.println("Account Number " + no + "\n");
-		System.out.println("\tAccount Saldo: \t\t\t" + saldo);
-		System.out.println("\tAccount Rate: \t\t\t" + rate);
+	public ListNode getNext(){
+		return next;
 	}
-	
-	public double getSaldo(){
-		return saldo;
-	}
-	
 	
 }
