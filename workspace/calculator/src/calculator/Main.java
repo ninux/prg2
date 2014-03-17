@@ -15,53 +15,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package queue;
+package calculator;
+
 import static gpl.GPL.*;
 
 /**
  *
  * @author ninux
  */
-public class ListNode {
-	
-	private ListNode previous;
-	private ListNode next;
-	private Object data;
-	
-	public ListNode(Object obj){
-		previous = null;
-		next = null;
-		data = obj;
+public class Main {
+	public static void main(String[] args){
+		Calculator cal = new Calculator();
 	}
-	
-	public ListNode(ListNode before, ListNode after, Object obj){
-		previous = before;
-		next = after;
-		data = obj;
-	}
-	
-	public void setNext(ListNode n){
-		next = n;
-	}
-	
-	public void setPrevious(ListNode p){
-		previous = p;
-	}
-	
-	public void setData(Object d){
-		data = d;
-	}
-	
-	public ListNode getNext(){
-		return next;
-	}
-	
-	public ListNode getPrevious(){
-		return previous;
-	}
-	
-	public Object getData(){
-		return data;
-	}
-	
 }

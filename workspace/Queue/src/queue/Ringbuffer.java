@@ -16,6 +16,7 @@
  */
 
 package queue;
+import static gpl.GPL.*;
 
 /**
  *

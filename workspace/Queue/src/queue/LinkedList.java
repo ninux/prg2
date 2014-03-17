@@ -17,51 +17,37 @@
 
 package queue;
 import static gpl.GPL.*;
+import queue.ListNode;
 
 /**
  *
  * @author ninux
  */
-public class ListNode {
+public class LinkedList {
 	
-	private ListNode previous;
-	private ListNode next;
-	private Object data;
+	ListNode head;
+	ListNode tail;
+	ListNode current;
 	
-	public ListNode(Object obj){
-		previous = null;
-		next = null;
-		data = obj;
+	public LinkedList(){
+		head = null;
+		tail = null;
+		current = null;
 	}
 	
-	public ListNode(ListNode before, ListNode after, Object obj){
-		previous = before;
-		next = after;
-		data = obj;
+	public void insertAtBegin(Object obj){
+		if(head == null){
+			ListNode newNode = new ListNode(obj);
+			newNode.setPrevious(null);
+			newNode.setNext(null);
+			head = newNode;
+		}
+		else{
+			ListNode newNode = new ListNode(obj);
+			newNode.setNext(head);
+			newNode.setPrevious(null);
+			head.setPrevious(newNode);
+			head = newNode;
+		}
 	}
-	
-	public void setNext(ListNode n){
-		next = n;
-	}
-	
-	public void setPrevious(ListNode p){
-		previous = p;
-	}
-	
-	public void setData(Object d){
-		data = d;
-	}
-	
-	public ListNode getNext(){
-		return next;
-	}
-	
-	public ListNode getPrevious(){
-		return previous;
-	}
-	
-	public Object getData(){
-		return data;
-	}
-	
 }
