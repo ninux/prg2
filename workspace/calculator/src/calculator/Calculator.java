@@ -48,11 +48,13 @@ public class Calculator extends Frame implements WindowListener {
 	Button btn_multiply = new Button("x");
 	Button btn_add = new Button("+");
 	Button btn_subtract = new Button("-");
+	Button btn_square = new Button("x" + "\u00b2");
 	Button btn_sign = new Button("\u00B1");
 	Button btn_result = new Button("=");
 	
 	// Special function buttons
 	Button btn_clear = new Button("C");
+	Button btn_info = new Button("Info");
 	
 	// Textfield
 	TextField txt = new TextField("I can't calculate things!");
@@ -62,7 +64,7 @@ public class Calculator extends Frame implements WindowListener {
 	Panel keyboard = new Panel(gl);
 	
 	public Calculator(){
-		super("Calculator");
+		super("Ninux' Calculator");
 		setSize(HEIGTH, LENGTH);
 		setResizable(false);
 		setLayout(new BorderLayout());
@@ -71,6 +73,7 @@ public class Calculator extends Frame implements WindowListener {
 		txt.setBackground(Color.WHITE);
 		
 		add(txt, BorderLayout.NORTH);
+		add(btn_info, BorderLayout.SOUTH);
 		
 		keyboard.add(btn_seven);
 		keyboard.add(btn_eigth);
@@ -89,10 +92,34 @@ public class Calculator extends Frame implements WindowListener {
 		keyboard.add(btn_result);
 		keyboard.add(btn_add);
 		keyboard.add(btn_clear);
+		keyboard.add(btn_square);
 		
-		add(keyboard, BorderLayout.SOUTH);
+		add(keyboard, BorderLayout.CENTER);
 		
 		addWindowListener(this);
+		
+		ButtonListener bl = new ButtonListener(this);
+		btn_zero.addActionListener(bl);
+		btn_one.addActionListener(bl);
+		btn_two.addActionListener(bl);
+		btn_three.addActionListener(bl);
+		btn_four.addActionListener(bl);
+		btn_five.addActionListener(bl);
+		btn_six.addActionListener(bl);
+		btn_seven.addActionListener(bl);
+		btn_eigth.addActionListener(bl);
+		btn_nine.addActionListener(bl);
+		
+		btn_divide.addActionListener(bl);
+		btn_multiply.addActionListener(bl);
+		btn_add.addActionListener(bl);
+		btn_subtract.addActionListener(bl);
+		btn_square.addActionListener(bl);
+		btn_sign.addActionListener(bl);
+		btn_result.addActionListener(bl);
+		
+		btn_clear.addActionListener(bl);
+		btn_info.addActionListener(bl);
 		
 		setVisible(true);
 	}
@@ -131,7 +158,5 @@ public class Calculator extends Frame implements WindowListener {
 	public void windowDeactivated(WindowEvent we) {
 		
 	}
-	
-	
 	
 }

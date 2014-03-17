@@ -26,5 +26,6 @@ import static gpl.GPL.*;
 public class Main {
 	public static void main(String[] args){
 		Calculator cal = new Calculator();
+		ButtonListener bl = new ButtonListener(cal);
 	}
 }
