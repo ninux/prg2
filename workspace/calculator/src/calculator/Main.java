@@ -25,7 +25,14 @@ import static gpl.GPL.*;
  */
 public class Main {
 	public static void main(String[] args){
+		/**
+		 * Create the GUI.
+		 */
 		Calculator cal = new Calculator();
+		
+		/**
+		 * Start the ButtonListener.
+		 */
 		ButtonListener bl = new ButtonListener(cal);
 	}
 }

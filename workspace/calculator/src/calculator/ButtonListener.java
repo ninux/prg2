@@ -20,10 +20,16 @@ package calculator;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
+/**
+ * 
+ * @author ninux
+ */
 public class ButtonListener implements ActionListener{
 	private Calculator gui;
 	private Computer cp = new Computer();
+	private static final String INFO = "\u00a9" + " Copyright by Ninux, GNU GPLv3";
+	private static final String SOURCE = "See http://github.com/ninux/prg2";
+	private static final String LUXERIA = "Go to www.luxeria.ch now!";
 
 	public ButtonListener(Calculator gui){
 		this.gui = gui;
@@ -86,8 +92,16 @@ public class ButtonListener implements ActionListener{
 			cp.setOperator("/");
 			gui.txt.setText(cp.getOperator());
 		}
-		if(event.getSource() == gui.btn_square){
-			cp.square();
+		if(event.getSource() == gui.btn_saveMemory){
+			cp.saveToMemory();
+			gui.txt.setText(String.valueOf(cp.getAccu()));
+		}
+		if(event.getSource() == gui.btn_recallMemory){
+			cp.recallMemory();
+			gui.txt.setText(String.valueOf(cp.getAccu()));
+		}
+		if(event.getSource() == gui.btn_clearMemory){
+			cp.clearMemory();
 			gui.txt.setText(String.valueOf(cp.getAccu()));
 		}
 		if(event.getSource() == gui.btn_sign){
@@ -103,8 +117,13 @@ public class ButtonListener implements ActionListener{
 			gui.txt.setText("");
 		}
 		if(event.getSource() == gui.btn_info){
-			gui.txt.setText("\u00a9" + " Copyright by Ninux, GNU GPLv3");
+			gui.txt.setText(INFO);
 		}
-		
+		if(event.getSource() == gui.btn_source){
+			gui.txt.setText(SOURCE);
+		}
+		if(event.getSource() == gui.btn_luxeria){
+			gui.txt.setText(LUXERIA);
+		}
 	}
 }
