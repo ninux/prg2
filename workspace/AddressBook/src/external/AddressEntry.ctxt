@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AddressEntry()
+comment1.params=givenName\ familyName\ zipCode\ residence\ phoneNumber\ eMailAddress
+comment1.target=AddressEntry(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=givenName
+comment2.target=void\ setGivenName(java.lang.String)
+comment3.params=familyName
+comment3.target=void\ setFamilyName(java.lang.String)
+comment4.params=zipCode
+comment4.target=void\ setZipCode(java.lang.String)
+comment5.params=residence
+comment5.target=void\ setResidence(java.lang.String)
+comment6.params=phoneNumber
+comment6.target=void\ setPhoneNumber(java.lang.String)
+comment7.params=eMailAdresse
+comment7.target=void\ setEmailAddress(java.lang.String)
+numComments=8
