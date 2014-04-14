@@ -13,7 +13,7 @@ public class Node <T> {
     
     public Node(Node<T> n, Node<T> p, T d){
         next = n;
-        // previous = p;
+        previous = p;
         data = d;
     }
     

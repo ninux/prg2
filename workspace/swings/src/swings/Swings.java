@@ -6,9 +6,12 @@
 
 package swings;
 
+import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -33,8 +36,11 @@ public class Swings extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		JButton button = new JButton("Count button clicks");
-		final JLabel label = new JLabel("Number of clicks: " + numClicks);
+		final JLabel label = new JLabel("Number of clicks: " + numClicks); // Why final???
 				
+		button.setBorder(BorderFactory.createLineBorder(Color.black));
+		label.setBorder(BorderFactory.createLineBorder(Color.black));
+		
 		button.addActionListener(
 			new ActionListener(){
 				public void actionPerformed(ActionEvent event){
@@ -44,7 +50,8 @@ public class Swings extends JFrame{
 			}
 		);
 		
-		setLayout(new GridLayout(0, 1));
+		//setLayout(new GridLayout(0, 1));
+		setLayout(new FlowLayout(40, 20, 20));
 		add(button);
 		add(label);
 		

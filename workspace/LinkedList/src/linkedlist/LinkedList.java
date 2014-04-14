@@ -12,7 +12,7 @@ public class LinkedList <T> {
        current = null;
     }
     
-    public void insertAtHead(Object obj){
+    public void insertAtHead(T obj){
         if(head == null){   // the list is empty
             Node nn = new Node(obj);
             nn.setNext(null);
@@ -29,7 +29,7 @@ public class LinkedList <T> {
         }
     }
     
-    public void insertAtEnd(Object obj){
+    public void insertAtEnd(T obj){
         if(head == null){   // the lsit is empty
             Node nn = new Node(obj);
             nn.setNext(null);

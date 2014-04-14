@@ -23,10 +23,10 @@ public class PriorityQueue <T> {
     
     public T get(){
         int i = MOST_IMPORTANT;
-        while(jobs[i].isEmpty()){
+        while(jobs[i].isEmpty() && i > LEAST_IMPORTANT){
             i--;
         }
-        if(i >= LEAST_IMPORTANT){
+        if(i >= LEAST_IMPORTANT && !jobs[i].isEmpty()){
             return jobs[i].remove(0);
         }
         return null;
