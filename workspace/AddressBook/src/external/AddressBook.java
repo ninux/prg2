@@ -13,18 +13,21 @@ public class AddressBook
     public void tester() throws Exception
     {
         AddressEntry a = new AddressEntry();
-        a.setGivenName("Hans");
-        
-        a.setFamilyName("Muster");
+
         try {
-            a.setZipCode("6048");
+			a.setGivenName("Hans");
+			a.setFamilyName("Muster");
+			a.setZipCode("6048");
+			a.setResidence("Horw");
+			a.setPhoneNumber("+41413391111");
+			a.setEmailAddress("Hans.Muster@info.com");
         }
-        catch (NumberFormatException e) {}
-        
-            
-        a.setResidence("Horw");
-        a.setPhoneNumber("+41413391111");
-        a.setEmailAddress("Hans.Muster@info.com");
+		catch (InvalidEmailException e){
+			throw new InvalidEmailException("invalid number of @ character");
+		}
+        catch (IllegalArgumentException e) {
+			throw new IllegalAccessException();
+		}
 
         list.add(a);
     }
