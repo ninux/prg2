@@ -20,7 +20,12 @@ public class AddressEntry
                         String zipCode, String residence, 
                         String phoneNumber, String eMailAddress)
     {
-
+		setGivenName(givenName);
+		setFamilyName(familyName);
+		setZipCode(zipCode);
+		setResidence(residence);
+		setPhoneNumber(phoneNumber);
+		setEmailAddress(eMailAddress);
     }
 
     public void setGivenName(String givenName) throws IllegalArgumentException
@@ -80,8 +85,8 @@ public class AddressEntry
 
     public void setEmailAddress(String eMailAddress) throws InvalidEmailException
     {
-		if(containsOneAt(eMailAddress)){
-			throw new InvalidEmailException("testing");
+		if(!containsOneAt(eMailAddress)){
+			throw new InvalidEmailException(eMailAddress + " is not valid");
 		}
 		else{
 			this.eMailAddress = eMailAddress;
